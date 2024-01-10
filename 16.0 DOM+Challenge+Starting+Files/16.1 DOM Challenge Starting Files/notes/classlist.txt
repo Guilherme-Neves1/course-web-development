@@ -1,0 +1,22 @@
+    CLASS LIST 
+
+document.querySelector("button").classList;
+=> DOMTokenList ['btn', value: 'btn']0: "btn"length: 1value: "btn"[[Prototype]]: DOMTokenList
+
+# ADICIONAR UMA CLASSE NOVA (.classList.add(" "))
+document.querySelector("button").classList.add("invisible");
+
+# AGORA É POSSÍVEL MODIFICAR ESSA TAG NO CSS 
+.invisible {
+  visibility: hidden;
+}
+
+# REMOVER A CLASSE (.classList.remove(" "))
+document.querySelector("button").classList.remove("invisible");
+
+# ADICIONAR OU REMOVER (.classList.toggle(" "))
+# SE A CLASSE NÃO EXISTIR ADIOCIONE
+# SE EXISITR, REMOVA
+document.querySelector("button").classList.toggle("invisible");
+
+

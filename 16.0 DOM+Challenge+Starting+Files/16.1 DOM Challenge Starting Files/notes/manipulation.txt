@@ -1,0 +1,18 @@
+    Manipulation Elements 
+
+## Alterar o texto
+
+# .innerHTML => Seleciona TODO o HTML dentro da tag, podendo ser feita alterações significativas no texto, adiconando tags.
+
+document.getElementById("title").innerHTML = "Hello";
+=> "Hello"
+
+document.querySelector("h1").innerHTML = "<strong><em>Hello</em></strong>";
+
+# .textContent => Seleciona apenas o texto.
+document.querySelector("h1").textContent = "How much?";
+De "Hello" para:
+=> "How much?"
+
+
+

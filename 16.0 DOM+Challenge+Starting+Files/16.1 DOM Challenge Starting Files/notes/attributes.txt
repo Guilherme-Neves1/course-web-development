@@ -1,0 +1,12 @@
+    Attbutes
+
+# TUDO que é adicionado dentro da tag, exceto ela mesma, são atributos.
+# Ex.: href, class, id, src, style, alt ...
+
+## Selecionar o atributo (.getAttribute(" "))
+document.querySelector("a").getAttribute("href");
+=> 'https://www.google.com'
+
+## Alterar o atributo (.setAttribute(" ", " ")) => 2 parâmetros
+document.querySelector("a").setAttribute("href", "https://www.appbrewery.co/p/web-development-course-resources");
+=> 'https://www.appbrewery.co/p/web-development-course-resources'
