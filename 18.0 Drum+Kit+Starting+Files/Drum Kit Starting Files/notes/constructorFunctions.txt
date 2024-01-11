@@ -1,0 +1,64 @@
+    1.Constructor Functions
+
+// o nome da função não é em camelCase.
+function BellBoy (name, age, hasWorkPermit, languages) {
+  this.name = name;
+  this.age = age;
+  this.hasWorkPermit = hasWorkPermit;
+  this.languages = languages;
+}
+
+# Initialise Object
+var bellBoy1 = new BellBoy("Timmy", 19, true, ["French", "German"]);
+
+var bellBoy2 = new BellBoy("Tony", 21, false, ["English", "German"]);
+
+# ADD Method 
+function BellBoy (name, age, hasWorkPermit, languages) {
+  this.name = name;
+  this.age = age;
+  this.hasWorkPermit = hasWorkPermit;
+  this.languages = languages;
+  this.moveSuitcase: function() {
+    alert("May I take your suitcase?");
+    pickUpSuitcase();
+    move();
+  }
+}
+
+##############
+# AUDIO
+function Audio (fileLocation) {
+  this.fileLocation = fileLocation;
+  this.play = function() {
+    // Tap into the audio hardware
+    // Check the file at fileLocation exists
+    // Check the file at fileLocation is a sound file
+    // Play the file at fileLocation
+  }
+}
+
+# CALL Audio 
+var tom1 = new Audio ("sounds/tom-1.mp3);
+tom1.play();
+
+## MORE EXAMPLES
+// var houseKeeper1 = {
+//     name: "Clara",
+//     age: 25,
+//     function: "Governant",
+//     hotels: ["Tivoli", "Mosby", "Castell"],
+//     linguage: ["English", "Portuguese"]
+// }
+
+function HouseKeeper (yearsOfExperience, name, cleaningRepertoire) {
+    this.yearsOfExperience = yearsOfExperience;
+    this.name = name;
+    this.cleaningRepertoire = cleaningRepertoire;
+    this.clean = function() {
+        alert("Cleaning in progress...");
+    }
+}
+
+var houseKeeper1 = new HouseKeeper(15, "Clara", ["Bedroom", "Bathroom", "Lobby"]);
+var houseKeeper2 = new HouseKeeper(5, "Jimmy", ["Bathroom", "Lobby"]);

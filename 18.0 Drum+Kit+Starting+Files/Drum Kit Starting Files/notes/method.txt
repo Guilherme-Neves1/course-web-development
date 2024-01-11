@@ -1,0 +1,34 @@
+    2.Method
+  Função associada a um objeto.
+
+#######################
+// In var:
+var bellBoy1 = {
+  name: "Tommy",
+  age: 19,
+  hasWorkPermit: true,
+  languages: ["French", "German"],
+  moveSuitcase: function() {
+    alert("May I take your suitcase?");
+    pickUpSuitcase();
+    move();
+  }
+}
+
+# Call Method 
+
+bellBoy1.moveSuitcase();
+
+#########################
+// In function :
+function BellBoy (name, age, hasWorkPermit, languages) {
+  this.name = name;
+  this.age = age;
+  this.hasWorkPermit = hasWorkPermit;
+  this.languages = languages;
+  this.moveSuitcase: function() {
+    alert("May I take your suitcase?");
+    pickUpSuitcase();
+    move();
+  }
+}
