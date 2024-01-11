@@ -1,0 +1,113 @@
+        JQuery
+
+1. Caso os scripts estejam em head, usar essa condição para o funcionamento da biblioteca:
+
+$(document).ready(function() {
+
+  // Códigos
+
+  $("h1").css("color", "red");
+
+}); 
+
+
+Assim, o código só funcionara após a leitura do html.
+Para não precisar fazer isso, bastar colocar os scripts acima do fechamento de body, como sempre.
+
+2. O "$" em JQuery pode ser usado paara selecionar um ou mais itens, que substitui o querySelector e o querySelectorAll ao mesmo tempo.
+
+  $("h1").css("color", "green");
+  $("button"); => 5 buttons.
+
+3. Também é possível verificar a propriedade do elemento pelo CSS.
+
+  console.log($("h1").css("font-size"));
+  => 24px
+
+4. NÃO é recomendado usar o JavaScript para mexer diretamente com o CSS, é boa prática mexer separadamente com os dois, e usar dos comandos de JS para interagir com CSS.
+
+  $("h1").addClass("big-title");
+
+5. Consultar se a classe está no elemento 
+
+  $("h1").hasClass("margin-50");
+  => true
+
+6. Manipular APENAS o texto => '.text("novo texto aqui")'
+  
+  $("h1").text("Bye");
+
+  Alterar o texto de TODOS os buttons da pág:
+  $("button").text("Don't Click Me");
+
+  innerHTML na versão JQuery:
+  => Alterar todo HTML dentro da tag "button", exceto ela mesma:
+  $("button").html("<em>OKAY</em>");
+
+7. Manipular atributos
+  src, alt, href, style ...
+
+  Fazer a consulta do atributo:
+  console.log($("img").attr("src"));
+
+  Alterar o atributo:
+  $("a").attr("href", "https://yahoo.com.br");
+
+  consultar as classes de uma tag:
+  $("h1").attr("class");
+
+8. EventListener
+
+  Click para mudar a cor de um item:
+  $("h1").click(function () {
+    $("h1").css("color", "purple");
+  });
+
+  VANILLA X JQUERY 
+
+    VANILLA:
+  for(var i = 0; i < 5; i++) {
+    document.querySelectorAll("button")[i].addEventListener("click", function() {
+      document.querySelector("h1").style.color = "green";
+    });
+  }
+
+    JQUERY:
+  $("button").click(function () {
+    $("h1").css("color", "darkorange");
+  });
+
+  Registrar teclas no log através de um input:
+  $("input").keydown(function(event) {
+    console.log(event.key);
+  });
+
+  Agora através da página:
+  $(document).keydown(function(event) {
+    console.log(event.key);
+  });
+
+9. Encurtar ainda mais os Eventos 
+  .on("event", () => { });
+
+  $("h1").on("mouseover", function() {
+    $("h1").css("color", "gray");
+  });
+
+10. Criar elementos HTML
+
+    Antes da TAG:
+  $("h1").before("<button>New</button>");
+
+    Depois da TAG:
+  $("h1").after("<button>New</button>");
+
+  Criar DENTRO da TAG selecionada
+    Antes do elemento:
+  $("h1").prepend("<button>New Prepend</button>");
+
+    Depois do elemento:
+  $("h1").append("<button>New Append</button>");
+
+
+
