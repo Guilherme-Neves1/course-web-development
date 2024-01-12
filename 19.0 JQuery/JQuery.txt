@@ -14,7 +14,7 @@ $(document).ready(function() {
 Assim, o código só funcionara após a leitura do html.
 Para não precisar fazer isso, bastar colocar os scripts acima do fechamento de body, como sempre.
 
-2. O "$" em JQuery pode ser usado paara selecionar um ou mais itens, que substitui o querySelector e o querySelectorAll ao mesmo tempo.
+2. O "$" em JQuery pode ser usado para selecionar um ou mais itens, que substitui o querySelector e o querySelectorAll ao mesmo tempo.
 
   $("h1").css("color", "green");
   $("button"); => 5 buttons.
@@ -45,7 +45,7 @@ Para não precisar fazer isso, bastar colocar os scripts acima do fechamento de 
   $("button").html("<em>OKAY</em>");
 
 7. Manipular atributos
-  src, alt, href, style ...
+  class, id, src, alt, href, style ...
 
   Fazer a consulta do atributo:
   console.log($("img").attr("src"));
