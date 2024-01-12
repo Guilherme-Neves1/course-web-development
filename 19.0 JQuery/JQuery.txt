@@ -109,5 +109,81 @@ Para não precisar fazer isso, bastar colocar os scripts acima do fechamento de 
     Depois do elemento:
   $("h1").append("<button>New Append</button>");
 
+11. Remover elementos HTML
+
+  $("button").remove();
+
+12. Animações
+
+    Ao clicar em p Hide, h1 desaparece:
+  $(".hide").on("click", function() {
+    $("h1").hide();
+  });
+
+    Ao clicar em p Show, h1 reaparece:
+  $(".show").on("click", function() {
+    $("h1").show();
+  });
+
+    Ao clicar em p Toggle, h1 desaparece, ao clicar novamente em p Toggle, h1 reaparece:
+  $(".toggle").on("click", function() {
+    $("h1").toggle();
+  });
+
+    Ao clicar em p Fade Out, h1 desaparece sutilmente:
+  $(".fadeOut").on("click", function() {
+    $("h1").fadeOut();
+  });
+
+    Ao clicar em p Fade In, h1 reaparece sutilmente:
+  $(".fadeIn").on("click", function() {
+    $("h1").fadeIn();
+  });
+
+    Ao clicar em p Fade Toggle, ocorre o Out e In:
+  $(".fadeToggle").on("click", function() {
+    $("h1").fadeToggle();
+  });
+
+    Ao clicar em p Slide Up, h1 sobe:
+  $(".slideUp").on("click", function() {
+    $("h1").slideUp();
+  });
+
+    Ao clicar em p Slide Down, h1 desce:
+  $(".slideDown").on("click", function() {
+    $("h1").slideDown();
+  });
+
+    Ao clicar em p Slide Toggle, h1 sobe e ao clicar novamente, desce:
+  $(".slideToggle").on("click", function() {
+    $("h1").slideToggle();
+  });
+
+###################################
+    Com animate(LIMITADO A VALORES NUMÉRICOS):
+    color: red, font-family: Arial ... NÃO FUNCIONAM
+
+    Opacity:
+  $(".aniOpc").on("click", function() {
+    $("h1").animate({opacity: 0.5});
+  });
+
+    Margin:
+  $(".aniMg").on("click", function() {
+    $("h1").animate({margin: 100});
+  });
+
+    Margin %, px, rem:
+  $(".aniMg").on("click", function() {
+    $("h1").animate({margin: "20%"});
+  });
+
+###################################
+    ENCADEAR animações:
+  $(".chain").on("click", function() {
+    $("h1").slideUp().slideDown().animate({fontSize: "25px"});
+  });
+
 
 

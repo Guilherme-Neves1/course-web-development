@@ -108,4 +108,84 @@ $("h1").prepend("<button>New Prepend</button>");
 // Depois do elemento
 $("h1").append("<button>New Append</button>");
 
+// Remover elementos HTML
+//$("button").remove();
+
+// Animações
+
+// Ao clicar em um botão, h1 desaparece
+$(".hide").on("click", function() {
+  $("h1").hide();
+});
+
+// Ao clicar na imagem, h1 reaparece:
+$(".show").on("click", function() {
+  $("h1").show();
+});
+
+// Ao clicar em p, h1 desaparece e ao clicar dnv, reaparece
+$(".toggle").on("click", function() {
+  $("h1").toggle();
+});
+
+// Ao clicar em p Fade Out, h1 desaparece sutilmente
+$(".fadeOut").on("click", function() {
+  $("h1").fadeOut();
+});
+
+// Ao clicar em p Fade In, h1 reaparece sutilmente
+$(".fadeIn").on("click", function() {
+  $("h1").fadeIn();
+});
+
+// Ao clicar em p FadeToggle, ocorre Out e In
+$(".fadeToggle").on("click", function() {
+  $("h1").fadeToggle();
+});
+
+// Ao clicar em p Slide Up, h1 sobe
+$(".slideUp").on("click", function() {
+  $("h1").slideUp();
+});
+
+// Ao clicar em p Slide Down, h1 desce
+$(".slideDown").on("click", function() {
+  $("h1").slideDown();
+});
+
+// Ao clicar em p Slide Toggle, h1 sobe e ao clicar novamente, desce.
+$(".slideToggle").on("click", function() {
+  $("h1").slideToggle();
+});
+
+// ###################################
+//Com animate(LIMITADO A VALORES NUMÉRICOS):
+//color: red, font-family: Arial ... NÃO FUNCIONAM
+
+// Opacity
+$(".aniOpc").on("click", function() {
+  $("h1").animate({opacity: 0.5});
+});
+
+// Margin
+$(".aniMg").on("click", function() {
+  $("h1").animate({margin: 100});
+});
+
+// Margin %, px, rem ...
+$(".aniMg2").on("click", function() {
+  $("h1").animate({margin: "20px"});
+});
+
+// ######################
+// CHAIN
+$(".chain").on("click", function() {
+  $("h1").slideUp().slideDown().animate({fontSize: "25px"});
+});
+
+
+
+
+
+
 
