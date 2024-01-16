@@ -1,0 +1,5 @@
+File System => Módulo nativo do nó que nos permite acessar o armazenamento local.
+  Para usá-lo, precisamos "importar" o código do módulo do sistema de arquivos ou podemos "exigir" as partes do código que precisamos desse módulo.
+
+CJS => Padrão Commonjs
+  Padrões são usados para obter os métodos do módulo do sistema de arquivos.
