@@ -48,4 +48,9 @@ O CommonJS vêm por padrão.
   Assim, após adicionar a biblioteca no from,
   no import terá o nome do metódo do pacote sugerido.
 
+6. Caso esqueça de preencher as questões do item 2,
+basta usar o comando:
+  npm init -y
+
+Esse comando irá preencher todo o package.json, basicamente o -y está dizendo yes a todas as perguntas.
 
