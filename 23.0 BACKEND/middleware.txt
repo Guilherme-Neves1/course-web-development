@@ -1,0 +1,15 @@
+    1. Body-parser
+
+  Package usado para analisar as informações que chegam por meio do formulário no site.
+  Quando o botão for apertado, o form fará a solicitação POST para o caminho especificado, que no caso foi /submit. 
+
+  npm i body-parser
+
+  Comandos:
+  app.use(bodyParser.urlencoded({ extended: true}));
+
+  app.post("/submit", (req, res) => {
+    console.log(req.body);
+  });
+
+      2. Morgan
