@@ -1,0 +1,60 @@
+    NPM => bibliotecas
+
+1. Após entrar na pasta desejada, realizar o comando:
+  npm init
+
+2. Definior o nome, versão etc.
+
+  Press ^C at any time to quit.
+  package name: (23.5-2.3-npm) learning-npm
+  version: (1.0.0)
+  description: I'm learning about npm
+  entry point: (index.js)
+  test command:
+  git repository:
+  keywords:
+  author: Guilherme
+  license: (ISC)
+  About to write to C:\Users\Guilherme\Desktop\udemy-web -development -bootcamp\23.5 2.3 NPM\package.json:
+
+  {
+    "name": "learning-npm",
+    "version": "1.0.0",
+    "description": "I'm learning about npm",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"        
+    },
+    "author": "Guilherme",
+    "license": "ISC"
+  }
+
+  Is this OK? (yes) y
+
+3. Agora, podemos usar o comando para instalar os pacotes.
+  Um pacote:
+  npm install nomeDoPacote
+
+  Mais de um:
+  npm install nomeDoPacote1 nomeDoPacote2 nomeDoPacote3
+
+4. Para usar o 'import', precisamos alterar o padrão para ESM, indo em 'package.json' e adicionando:
+  "type": "module",
+
+O CommonJS vêm por padrão.
+
+5. Versão ESM
+  DICA: Usar 'import xxx from "nomeDoPacote"'
+  Assim, após adicionar a biblioteca no from,
+  no import terá o nome do metódo do pacote sugerido.
+
+6. Caso esqueça de preencher as questões do item 2 ou queira agilizar o processo, sem precisar escrever nada,
+basta usar o comando:
+  npm init -y
+
+Esse comando irá preencher todo o package.json, basicamente o -y está dizendo yes a todas as perguntas.
+
+7. Instalação global:
+  npm i -g nomeDaBiblioteca
+
+

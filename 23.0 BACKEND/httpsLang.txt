@@ -1,0 +1,50 @@
+  Request Vocab
+
+  GET => Request resource (Solicitar um recuso do servidor, como: site em HTML, texto, dado do banco de dados ...).
+  Geting on the server - Obtendo algo do servidor.
+
+  POST => Sending resource (Enviar um recurso para o servidor, como: formulários do site, enviando os dados preenchidos a um servidor).
+
+  PUT => Método de atualização => Replace resource (Substituir um recurso pelo novo que está sendo enviado, atualizar algo substituindo-o completamente).
+
+  PATCH= > Método de atualização => Patch up a resource (Corrigir um recurso, nova atualização, update).
+
+  DELETE => Delete resource.
+
+================================
+
+app.get("/about", (req, res) => {
+
+});
+
+app.get(" ") => Request.
+
+req => Request (solicitação).
+
+res => Response (resposta).
+
+================================
+    /Endpoint
+  "
+    app.get("/", (req, res) => {
+    res.send("Hello, World!");
+    });
+  "
+  A barra vai para o final do endereço 'localhost:3000/', ou seja, estamos acessando a página inicial.
+
+    / Com HTML
+  "
+    app.get("/", (req, res) => {
+    res.send("<h1>Hello, World!</h1><p>Test</p>");
+    });
+  "
+
+  Podemos ser mais especifícos e adicionar mais páginas:
+  "
+    app.get("/about", (req, res) => {
+    res.send("<h1>About Me</h1>");
+    });
+  "
+  Agora digitando 'localhost:3000/about', temos acesso a esse titulo h1.
+
+

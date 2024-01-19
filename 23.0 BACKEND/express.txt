@@ -1,0 +1,76 @@
+  Express
+
+1. Entrar na pasta desejada;
+
+2. Criar o arquivo 'index.js'; => MUITO IMPORTANTE, NPM ESTÁ PROGRAMADO PARA ACHAR 'index.js'.
+
+3. Usar o comando 'npm init -y';
+
+4. Verificar no package.json se a main é o index.js;
+
+5. Instalar o express:
+  npm i express
+
+6. Adicionar o "type": "module" dentro do package.json;
+
+7. Criar o servidor:
+  import express from "express";
+  const app = express();
+
+  app.listen(3000, () => {
+    console.log("Server running on port 3000.");
+  });
+
+  ou
+
+  import express from "express";
+  const app = express();
+  const port = 3000;
+
+  app.listen(port, () => {
+    console.log(`Server running on port ${port}.`);
+  });
+
+8. Iniciar o servidor:
+  node index.js
+
+9. Acessar o servidor pelo navegador, pesquisando:
+  localhost:3000
+
+10. (DICA) Para ter acesso a todas as portas que estão escutando ativamente a interação externa no PC.
+  Sair do servidor com Ctrl + C ou abrir um novo terminal e usar o comando:
+  netstat -ano | findstr "LISTENING"
+
+11. Usar o nodemon para atualizar o server, igual ao Live Server:
+  npm i -g nodemon => Instalação global 
+
+  nodemon index.js => Iniciar o server com o nodemon
+
+12. Comandos que podemos usar:
+
+  remover o Cannot GET /
+  app.get("/", (req, res) => {
+    res.send("Hello, World!");
+  });
+
+  Criar nova página e add HTML
+  app.get("/about", (req, res) => {
+    res.send("<h1>About Me</h1><p>My Name is Guilherme</p>");
+  });
+
+========================================
+  app.get("/about", (req, res) => {
+    res.send(" ");
+  });
+
+  app.get(" ") => Request.
+
+  req => Request (solicitação).
+
+  res => Response (resposta).
+========================================
+
+
+
+
+
