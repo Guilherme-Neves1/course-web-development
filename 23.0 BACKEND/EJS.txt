@@ -1,0 +1,32 @@
+    EJS Tags
+
+<%= 'variable' %>                   JS Output
+<% 'console.log("hello)' %>         JS Execute
+<%- '<h1>Hello</h1>' %>             Render HTML
+<%% 'Tutorial about tags' %%>       Show <% or %>           
+<%# This is a comment %>            Stop Execution
+<%- 'include("header.ejs")' %>      Insert another EJS file
+
+Ex.:
+
+    => index.js
+...
+let bowl = ["Apples", "Oranges", "Pears"];
+
+app.get("/", (req, res) => {
+  res.render("index.ejs", {
+    fruits: bowl
+  })
+});
+
+    => index.ejs
+...
+<body>
+  <ul>
+    <% for(let i=0; i<fruits.length; i++) { %>
+      <li>
+        <%= fruits[i] %>
+      </li>
+    <% } %>
+  </ul>
+</body>
